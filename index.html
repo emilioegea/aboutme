@@ -37,11 +37,23 @@
             font-size: 4rem;
             font-weight: bold;
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #a78bfa, #ec4899);
+            background: linear-gradient(45deg, #a78bfa, #ec4899);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
+
+        @keyframes gradienteAnimacion {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
         .gradient-text2 {
             font-size: 2rem;
