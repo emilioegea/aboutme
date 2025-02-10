@@ -36,10 +36,14 @@
             font-size: 4rem;
             font-weight: bold;
             margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #a78bfa, #ec4899);
-            -webkit-background-clip: text;
+            background: linear-gradient(
+                to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff
+                  );
+              background-size: 200%;
             background-clip: text;
-            color: transparent;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: moverDegradado 2.5s linear infinite;
         }
 
         .gradient-text2 {
@@ -189,6 +193,12 @@
             color: #a1a1aa;
         }
 
+        @keyframes moverDegradado {
+            to {
+            background-position: -200%;
+              }
+        }
+        
         @media (max-width: 768px) {
             .gradient-text {
                 font-size: 3rem;
