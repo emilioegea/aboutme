@@ -206,26 +206,7 @@
             color: #a1a1aa;
         }
 
-        @keyframes moverDegradado {
-            to {
-            background-position: -200%;
-              }
-        }
-        
-        @media (max-width: 768px) {
-            .gradient-text {
-                font-size: 3rem;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .socials {
+        .socials {
               display: flex;
               flex-wrap: wrap;
               gap: 1rem;
@@ -272,6 +253,25 @@
               background: linear-gradient(90deg, #3b82f6, #8b5cf6);
               color: white;
               box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
+            }
+        
+        @keyframes moverDegradado {
+            to {
+            background-position: -200%;
+              }
+        }
+        
+        @media (max-width: 768px) {
+            .gradient-text {
+                font-size: 3rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
