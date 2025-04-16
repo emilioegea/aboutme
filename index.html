@@ -1,141 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="inicio.png">
-    <title>Emilio Egea</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="inicio.png">
+        <title>Emilio Egea</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #f4f4f5;
-            background-color: #18181b;
-        }
+            canvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                display: block;
+            }
 
-       .container {
-            max-width: 1024px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+                line-height: 1.6;
+                color: #f4f4f5;
+                background-color: #18181b;
+            }
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 2rem 0;
-        }
+        .container {
+                max-width: 1024px;
+                margin: 0 auto;
+                padding: 0 1rem;
+            }
 
-        .gradient-text {
-            font-size: 4rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(
-                to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff
-                  );
-            background-size: 200%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: moverDegradado 2.5s linear infinite;
-        }
-        
-        .hero h2 {
-            font-size: 1.875rem;
-            color: #a1a1aa;
-            margin-bottom: 2rem;
-        }
+            .hero {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                padding: 2rem 0;
+            }
 
-        .icon {
-            color: #a1a1aa;
-            transition: color 0.3s;
-        }
+            .gradient-text {
+                font-size: 4rem;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+                background: linear-gradient(
+                    to right, #fc72ff, #8f68ff, #487bff, #8f68ff, #fc72ff
+                    );
+                background-size: 200%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: moverDegradado 2.5s linear infinite;
+            }
+            
+            .hero h2 {
+                font-size: 1.875rem;
+                color: #a1a1aa;
+                margin-bottom: 2rem;
+            }
 
-        .socials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            background-color: #1e293b;
-            color: white;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
-        }
-        
-        .btn.instagram:hover {
-            background-color: #E1306C;
-            box-shadow: 0 10px 25px rgba(225, 48, 108, 0.5);
-        }
-        
-        .btn.linkedin:hover {
-            background-color: #0077b5;
-            box-shadow: 0 10px 25px rgba(0, 119, 181, 0.5);
-        }
-        
-        .btn.github:hover {
-            background-color: #333;
-            box-shadow: 0 10px 25px rgba(51, 51, 51, 0.5);
-        }
-        
-        .btn.email {
-            background-color: white;
-            color: #1e293b;
-        }
-        
-        .btn.email:hover {
-            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
-            color: white;
-            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
-        }
+            .icon {
+                color: #a1a1aa;
+                transition: color 0.3s;
+            }
 
-        @keyframes moverDegradado {
-            to {
-            background-position: -200%;
-              }
-        }
-    </style>
-</head>
-<body>
-    <div class="min-h-screen bg-dark text-light">
-        <header class="hero">
-            <div class="container">
-                <h1 class="gradient-text">Emilio Egea Hernandez</h1>
-                <h2>IT Systems Administrator</h2>
-                <div class="socials">
-                    <a href="https://instagram.com/emilioeh7/" class="btn instagram" target="_blank">
-                      <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://linkedin.com/in/emilioegeahernandez" class="btn linkedin" target="_blank">
-                      <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/emilioegea" class="btn github" target="_blank">
-                      <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="mailto:emilioegeahernandez@gmail.com" class="btn email">
-                      <i class="fas fa-envelope"></i> Email
-                    </a>
-                  </div>
-            </div>
-        </header>
-    </div>
-</body>
+            .socials {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 140px;
+                justify-content: center;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                background-color: #1e293b;
+                color: white;
+                text-decoration: none;
+                transition: all 0.2s ease;
+            }
+            
+            .btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+            }
+            
+            .btn.instagram:hover {
+                background-color: #E1306C;
+                box-shadow: 0 10px 25px rgba(225, 48, 108, 0.5);
+            }
+            
+            .btn.linkedin:hover {
+                background-color: #0077b5;
+                box-shadow: 0 10px 25px rgba(0, 119, 181, 0.5);
+            }
+            
+            .btn.github:hover {
+                background-color: #333;
+                box-shadow: 0 10px 25px rgba(51, 51, 51, 0.5);
+            }
+            
+            .btn.email {
+                background-color: white;
+                color: #1e293b;
+            }
+            
+            .btn.email:hover {
+                background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+                color: white;
+                box-shadow: 0 10px 25px rgba(59, 130, 246, 0.5);
+            }
+
+            @keyframes moverDegradado {
+                to {
+                background-position: -200%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="particles"></canvas>
+        <script>
+            const canvas = document.getElementById('particles');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            // Generate particles
+            const particles = [];
+            const count = 150;
+
+            for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 3 + 1,
+                speedY: Math.random() * 0.5 + 0.2,
+            });
+            }
+
+            function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(p => {
+                ctx.fillStyle = "rgba(186, 103, 245, 0.8)";
+                ctx.fillRect(p.x, p.y, p.size, p.size);
+
+                p.y += p.speedY;
+                if (p.y > canvas.height) {
+                p.y = 0;
+                p.x = Math.random() * canvas.width;
+                }
+            });
+
+            requestAnimationFrame(draw);
+            }
+
+            draw();
+        </script>
+        <div class="min-h-screen bg-dark text-light">
+            <header class="hero">
+                <div class="container">
+                    <h1 class="gradient-text">Emilio Egea Hernandez</h1>
+                    <h2>IT Systems Administrator</h2>
+                    <div class="socials">
+                        <a href="https://instagram.com/emilioeh7/" class="btn instagram" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://linkedin.com/in/emilioegeahernandez" class="btn linkedin" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/emilioegea" class="btn github" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="mailto:emilioegeahernandez@gmail.com" class="btn email">
+                        <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </body>
 </html>
